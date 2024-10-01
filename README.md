@@ -26,7 +26,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background-image: url('file:///C:/Users/5IUl.gif'); /* Путь к твоему GIF */
+            background-image: url('https://raw.githubusercontent.com/uxmei/uxmei.github.io/main/5IUl.gif'); /* Путь к твоему GIF */
             background-repeat: no-repeat;
             background-size: cover;
             filter: brightness(0.5); /* Уменьшение яркости */
@@ -88,7 +88,7 @@
 </head>
 <body>
 
-    <img src="C:/Users/2651.jpeg" alt="Твое фото">
+    <img src="https://raw.githubusercontent.com/uxmei/uxmei.github.io/main/2651.jpeg" alt="Твое фото">
     <h1 class="nickname" id="nickname">UXMEI</h1>
     <h2 class="real-name">Георгий</h2>
     <div class="social-links">
