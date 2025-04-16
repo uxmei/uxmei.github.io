@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -34,15 +33,11 @@
     }
 
     .nickname {
-      font-size: 2rem;
+      font-size: 2.2rem;
       margin-bottom: 10px;
       text-align: center;
-      transition: 0.3s ease;
-      cursor: pointer;
-    }
-
-    .glitch:hover {
-      text-shadow: 0 0 5px #00f, 0 0 10px #00f, 0 0 15px #0ff;
+      letter-spacing: 2px;
+      font-weight: bold;
     }
 
     .real-name {
@@ -55,6 +50,8 @@
     .links {
       display: flex;
       gap: 20px;
+      flex-wrap: wrap;
+      justify-content: center;
     }
 
     .links a {
@@ -76,7 +73,7 @@
 <body>
   <div class="avatar"></div>
 
-  <div class="nickname glitch" id="nickname">Tw1l1ght</div>
+  <div class="nickname">Tw1l1ght</div>
   <div class="real-name">Георгий</div>
 
   <div class="links">
@@ -85,48 +82,5 @@
     <a href="https://vk.com/uxmei" target="_blank">VK</a>
     <a href="https://t.me/Ob1iv10nDr34m5" target="_blank">Telegram</a>
   </div>
-
-  <script>
-    const nick = document.getElementById("nickname");
-    const glitchNames = [
-      "Tw1l1ght",
-      "𝖙𝖜𝟣𝖑𝟣𝖌𝖍𝖙",
-      "Ŧωɨʟɨɠђէ",
-      "tᵂ¹ʟⁱᴳʰᵗ",
-      "𝓣𝔀𝟙𝓵𝟙𝓰𝓱𝓽",
-      "𝐓𝐖𝟏𝐋𝟏𝐆𝐇𝐓",
-      "ʇɥƃɥlᴉʍʇ",
-      "Tᗯ1ᒪᏆǤᕼƬ"
-    ];
-    const hoverName = "U҉̮̫͌̇X҈̘͇͖͉̔̊̐M̶̝̬̲̦̔͂ͅE҈̭͕̦̤̪̔̑̍̐̌I̴̟̠͖̙̣̎̎̐";
-
-    function randomInterval() {
-      return Math.random() * 1000 + 500;
-    }
-
-    let original = "Tw1l1ght";
-    let hovering = false;
-
-    function updateNickname() {
-      if (hovering) {
-        nick.textContent = hoverName;
-        setTimeout(() => {
-          nick.textContent = original;
-        }, 1000 + Math.random() * 1000);
-      } else {
-        const newNick = glitchNames[Math.floor(Math.random() * glitchNames.length)];
-        nick.textContent = newNick;
-      }
-      setTimeout(updateNickname, randomInterval());
-    }
-
-    nick.addEventListener("mouseenter", () => { hovering = true; });
-    nick.addEventListener("mouseleave", () => {
-      hovering = false;
-      nick.textContent = original;
-    });
-
-    updateNickname();
-  </script>
 </body>
 </html>
