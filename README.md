@@ -1,137 +1,132 @@
-<html lang="ru">
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>2651</title>
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-            font-family: 'Arial', sans-serif;
-            background-color: #000;
-            color: #fff;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            flex-direction: column;
-            position: relative;
-            text-align: center; /* Центрируем текст */
-        }
-        body::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-image: url('https://raw.githubusercontent.com/uxmei/uxmei.github.io/main/5IUl.gif');
-            background-repeat: no-repeat;
-            background-size: cover;
-            filter: brightness(0.5);
-            z-index: -2;
-        }
-        .nickname {
-            font-size: 3em;
-            letter-spacing: 5px;
-            margin: 10px 0; /* Добавляем немного отступа */
-            text-decoration: line-through;
-            z-index: 1;
-        }
-        .real-name {
-            font-size: 1.5em;
-            margin: 10px 0; /* Убираем лишние отступы */
-            font-family: 'Courier New', monospace;
-            z-index: 1;
-        }
-        img {
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
-            margin-bottom: 20px;
-            position: relative;
-            z-index: 1;
-        }
-        img::after {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            border-radius: 50%;
-            border: 4px solid #ff0000;
-            box-shadow: 0 0 10px 3px #ff0000;
-            filter: blur(1px);
-            z-index: -1;
-            background: rgba(0, 0, 139, 0.4);
-        }
-        .social-links {
-            display: flex;
-            justify-content: center; /* Центрируем ссылки */
-            gap: 20px;
-            z-index: 1;
-        }
-        .social-links a {
-            color: #fff;
-            text-decoration: none;
-            font-size: 1.5em;
-            transition: color 0.3s;
-        }
-        .social-links a:hover {
-            color: #ff0000;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Tw1l1ght</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: url("https://i.pinimg.com/736x/71/bc/d9/71bcd9d315a3b5f4bb8b07a49e76778f.jpg") no-repeat center center fixed;
+      background-size: cover;
+      font-family: 'Courier New', monospace;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      overflow: hidden;
+      backdrop-filter: brightness(0.5);
+    }
+
+    .avatar {
+      width: 180px;
+      height: 180px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(255,0,0,0.3), transparent 60%);
+      background-size: cover;
+      background-position: center;
+      background-image: url("https://zefirka.club/uploads/posts/2022-10/thumbs/1666039253_5-zefirka-club-p-khello-kitti-estetika-na-avu-zaichik-6.jpg");
+      border: 2px solid rgba(255, 255, 255, 0.2);
+      margin-bottom: 25px;
+    }
+
+    .nickname {
+      font-size: 2rem;
+      margin-bottom: 10px;
+      text-align: center;
+      transition: 0.3s ease;
+      cursor: pointer;
+    }
+
+    .glitch:hover {
+      text-shadow: 0 0 5px #00f, 0 0 10px #00f, 0 0 15px #0ff;
+    }
+
+    .real-name {
+      font-size: 1rem;
+      opacity: 0.6;
+      font-style: italic;
+      margin-bottom: 20px;
+    }
+
+    .links {
+      display: flex;
+      gap: 20px;
+    }
+
+    .links a {
+      text-decoration: none;
+      color: white;
+      font-weight: bold;
+      background: rgba(255, 255, 255, 0.05);
+      padding: 10px 20px;
+      border-radius: 8px;
+      transition: 0.2s;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .links a:hover {
+      background: rgba(255, 255, 255, 0.15);
+    }
+  </style>
 </head>
 <body>
+  <div class="avatar"></div>
 
-    <img src="https://raw.githubusercontent.com/uxmei/uxmei.github.io/main/2651.jpeg" alt="Твое фото">
-    <h1 class="nickname" id="nickname">U҉̮̫͌̇X҈̘͇͖͉̔̊̐M̶̝̬̲̦̔͂ͅE҈̭͕̦̤̪̔̑̍̐̌I̴̟̠͖̙̣̎̎̐</h1>
-    <h2 class="real-name">Георгий</h2>
-    <div class="social-links">
-        <a href="https://steamcommunity.com/id/aziat_v_stonike" target="_blank">Steam</a>
-        <a href="https://www.instagram.com/uxmei52/" target="_blank">Instagram</a>
-        <a href="https://vk.com/uxmei" target="_blank">VK</a>
-    </div>
+  <div class="nickname glitch" id="nickname">Tw1l1ght</div>
+  <div class="real-name">Георгий</div>
 
-    <script>
-        const nicknameElement = document.getElementById('nickname');
-        const nicknames = [
-            "ɄӾ₥Ɇł",
-            "𝖚𝖝𝖒𝖊𝖎",
-            "?????",
-            "𝓾𝔁𝓶𝓮𝓲",
-            "𝓤𝓧𝓜𝓔𝓘",
-            "𝖀𝖃𝕸𝕰𝕴",
-            "UXMEI",
-            "uxmei",
-            "UxMeI",
-            "uXmEi"
-        ];
-        const hoverNickname = "U҉̮̫͌̇X҈̘͇͖͉̔̊̐M̶̝̬̲̦̔͂ͅE҈̭͕̦̤̪̔̑̍̐̌I̴̟̠͖̙̣̎̎̐";
+  <div class="links">
+    <a href="https://steamcommunity.com/profiles/76561199087942467/" target="_blank">Steam</a>
+    <a href="https://www.instagram.com/i.fear.wulfik/" target="_blank">Instagram</a>
+    <a href="https://vk.com/uxmei" target="_blank">VK</a>
+    <a href="https://t.me/Ob1iv10nDr34m5" target="_blank">Telegram</a>
+  </div>
 
-        function randomGlitch() {
-            const randomIndex = Math.floor(Math.random() * nicknames.length);
-            nicknameElement.textContent = nicknames[randomIndex];
-            const randomInterval = Math.random() * 1000 + 500; // от 0.5 до 1.5 секунд
-            setTimeout(randomGlitch, randomInterval);
-        }
+  <script>
+    const nick = document.getElementById("nickname");
+    const glitchNames = [
+      "Tw1l1ght",
+      "𝖙𝖜𝟣𝖑𝟣𝖌𝖍𝖙",
+      "Ŧωɨʟɨɠђէ",
+      "tᵂ¹ʟⁱᴳʰᵗ",
+      "𝓣𝔀𝟙𝓵𝟙𝓰𝓱𝓽",
+      "𝐓𝐖𝟏𝐋𝟏𝐆𝐇𝐓",
+      "ʇɥƃɥlᴉʍʇ",
+      "Tᗯ1ᒪᏆǤᕼƬ"
+    ];
+    const hoverName = "U҉̮̫͌̇X҈̘͇͖͉̔̊̐M̶̝̬̲̦̔͂ͅE҈̭͕̦̤̪̔̑̍̐̌I̴̟̠͖̙̣̎̎̐";
 
-        nicknameElement.addEventListener('mouseenter', () => {
-            const originalText = nicknameElement.textContent; // Сохраняем текущий текст
-            let hoverDuration = 0; // Начинаем таймер для наведения
-            const hoverInterval = setInterval(() => {
-                nicknameElement.textContent = hoverNickname; // Меняем на эффект
-                hoverDuration += 500; // Увеличиваем время
-                if (hoverDuration >= 2000) {
-                    nicknameElement.textContent = originalText; // Возвращаемся к оригинальному
-                    clearInterval(hoverInterval); // Останавливаем интервал
-                }
-            }, 500); // Каждые 0.5 секунд
-        });
+    function randomInterval() {
+      return Math.random() * 1000 + 500;
+    }
 
-        randomGlitch(); // Запускаем первый раз
-    </script>
-    
+    let original = "Tw1l1ght";
+    let hovering = false;
+
+    function updateNickname() {
+      if (hovering) {
+        nick.textContent = hoverName;
+        setTimeout(() => {
+          nick.textContent = original;
+        }, 1000 + Math.random() * 1000);
+      } else {
+        const newNick = glitchNames[Math.floor(Math.random() * glitchNames.length)];
+        nick.textContent = newNick;
+      }
+      setTimeout(updateNickname, randomInterval());
+    }
+
+    nick.addEventListener("mouseenter", () => { hovering = true; });
+    nick.addEventListener("mouseleave", () => {
+      hovering = false;
+      nick.textContent = original;
+    });
+
+    updateNickname();
+  </script>
 </body>
 </html>
